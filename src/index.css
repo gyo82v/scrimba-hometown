@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Set box sizing for everything */
+  * {
+    box-sizing: border-box;
+  }
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Apply custom styles to html, body, and the root element */
+  html, body, #root {
+    @apply min-h-screen m-0 p-0 bg-orange-50 text-orange-800;
+    line-height: 1.5;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    /* Hide scrollbar (Firefox and IE) */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  /* Hide scrollbar for WebKit */
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Ensure images and buttons behave as expected */
+  img {
+    @apply max-w-full h-auto;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .shadow-top {
+    box-shadow: 
+       0 -10px 15px -3px rgba(0, 0, 0, 0.1),
+       0 -4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  .shadow-all {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  /* custom orange‑800 scrollbar */
+  .scroll-orange::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scroll-orange::-webkit-scrollbar-track {
+    background: #FEF3C7; /* tailwind gray-50 or whatever */
+  }
+  .scroll-orange::-webkit-scrollbar-thumb {
+    background-color: #C05621; /* tailwind-orange-800 */
+    border-radius: 4px;
+  }
+  /* Firefox */
+  .scroll-orange {
+    scrollbar-width: thin;
+    scrollbar-color: #C05621 #FEF3C7;
+  }
+
+  /* checkbox color*/
+  .accent-orange {
+    accent-color: #C05621; /* Tailwind’s orange‑800 */
+  }
+
+}
+
+@layer components {
+  /* Hide number-input arrows in Chrome, Safari, Edge, Opera */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    @apply appearance-none;
+    margin: 0; /* some browsers need this */
+  }
+
+  /* Hide number-input arrows in Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
