@@ -22,7 +22,7 @@
 
   /* Apply custom styles to html, body, and the root element */
   html, body, #root {
-    @apply min-h-screen m-0 p-0 bg-orange-50 text-orange-800;
+    @apply min-h-screen m-0 p-0;
     line-height: 1.5;
     font-weight: 400;
     scroll-behavior: smooth;
@@ -53,43 +53,12 @@
        0 -4px 6px -2px rgba(0, 0, 0, 0.05);
   }
   .shadow-all {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  } 
+  .spooky {
+    font-family: "Mystery Quest", system-ui, sans-serif;
   }
-  /* custom orange‑800 scrollbar */
-  .scroll-orange::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-  .scroll-orange::-webkit-scrollbar-track {
-    background: #FEF3C7; /* tailwind gray-50 or whatever */
-  }
-  .scroll-orange::-webkit-scrollbar-thumb {
-    background-color: #C05621; /* tailwind-orange-800 */
-    border-radius: 4px;
-  }
-  /* Firefox */
-  .scroll-orange {
-    scrollbar-width: thin;
-    scrollbar-color: #C05621 #FEF3C7;
-  }
-
-  /* checkbox color*/
-  .accent-orange {
-    accent-color: #C05621; /* Tailwind’s orange‑800 */
-  }
-
-}
-
-@layer components {
-  /* Hide number-input arrows in Chrome, Safari, Edge, Opera */
-  input[type="number"]::-webkit-outer-spin-button,
-  input[type="number"]::-webkit-inner-spin-button {
-    @apply appearance-none;
-    margin: 0; /* some browsers need this */
-  }
-
-  /* Hide number-input arrows in Firefox */
-  input[type="number"] {
-    -moz-appearance: textfield;
+  .dancing {
+    font-family: "Dancing Script", cursive, sans-serif;
   }
 }
