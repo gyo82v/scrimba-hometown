@@ -8,7 +8,7 @@ export default function Activities({title, desc, imgSrc}){
     return(
         <div className={secStl}>
             <img src={imgSrc} alt={title} className={imgStl} />
-            <h2 className={h2Stl}>{title}</h2>
+            <h3 className={h2Stl}>{title}</h3>
             <p className={pStl}>{desc}</p>
         </div>
     )

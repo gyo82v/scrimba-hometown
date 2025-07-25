@@ -7,16 +7,16 @@ export default function Card({imgSrc}){
     const descstl = `italic font-light`
     const authorStl = `font-bold dancing mt-3`
     return(
-        <div className={divStl}>
+        <section className={divStl}>
           <img className={imgStl} src={imgSrc} alt="avatar of the guide" />
-          <div className={infoStl}>
-             <h2 className={h2Stl}>Your guide</h2>
+          <section className={infoStl}>
+             <h3 className={h2Stl}>Your guide</h3>
              <p className={descstl}>
                 “Few know where Thamor truly comes from, but
                  he knows these lands better than anyone alive.”
             </p>
              <p className={authorStl}>Thamor Eldenbrook</p>
-          </div>
-        </div>
+          </section>
+        </section>
     )
 }
